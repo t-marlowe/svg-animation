@@ -1,0 +1,205 @@
+/* ~~ Update Colours ~~ */
+:root {
+  /* used for inside sun, title, border */
+  --dark: hsl(266, 50%, 55%);
+  /* used for outside sun, subtitle */
+  --medium: hsl(266, 71%, 67%);
+  /* used for land */
+  --ground: rgb(64, 146, 190);
+  /* used for sky */
+  --background: rgb(197, 53, 205);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.badge {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  width: 250px;
+  height: 350px;
+  border-radius: 20px;
+  background-color: var(--background);
+  border: 8px solid var(--dark);
+}
+
+.badge__foreground,
+.badge__background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.badge__titles {
+  flex: 1;
+  z-index: 9;
+  bottom: 25px;
+  text-align: center;
+  color: white;
+}
+
+.badge__titles h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: var(--dark);
+  color: white;
+  margin: 0 0 20px 0;
+  animation-name: h1ani;
+  animation-duration: 2s;
+}
+
+@keyframes h1ani {
+  from {
+    transform: translateY(40px)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+.badge__titles h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  background-color: var(--medium);
+  margin: 0;
+  animation-name: h2ani;
+  animation-duration: 2s;
+}
+
+@keyframes h2ani {
+  from {
+    transform: translateY(80px)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+
+.sun {
+  animation-name: riseup;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes riseup {
+  from {
+    transform: translateY(50px)
+  }
+
+  to {
+    transform: translateY(-120px)
+  }
+}
+
+.hill {}
+
+.wheat {}
+
+.mountain {
+  animation-name: mountainmove;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes mountainmove {
+  from {
+    transform: translateX(100px) translateY(50px);
+  }
+
+  to {
+    transform: translateX(20px) translateY(20px);
+  }
+}
+
+.mountain-bg {
+  /* transform: translateY(-150px); */
+  animation-name: mountainmove2;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes mountainmove2 {
+  from {
+    transform: translateX(20px) translateY(50px);
+  }
+
+  to {
+    transform: translateX(-18px);
+  }
+}
+
+
+
+/*  ~~~ SVG SHAPE COLORS ~~~~ */
+
+.ground {
+  fill: var(--ground);
+}
+
+.insideSun {
+  fill: var(--dark);
+}
+
+.outsideSun {
+  fill: var(--medium);
+}
+
+.hill__fill {
+  fill: var(--ground);
+}
+
+.hill__border {
+  fill: white;
+}
+
+.wheat__highlight {
+  fill: white;
+}
+
+.wheat__fill {
+  fill: grey;
+}
+
+.mountain__fill {
+  fill: var(--ground);
+}
+
+.mountain__border {
+  fill: white;
+}
+
+.stroke-line {
+  stroke-dasharray: 400px;
+  stroke-dashoffset: -250px;
+  stroke-width: 5px;
+  fill: none;
+  stroke: #231f20;
+  animation-name: strokedraw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes strokedraw {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}

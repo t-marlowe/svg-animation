@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Landscape Badge CSS Animation - start</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="badge">
+    <div class="badge__titles">
+
+      <!--   UPDATE WHITE TEXT BELOW     -->
+      <h2>Subtitle</h2>
+      <h1>MAIN TITLE</h1>
+
+    </div>
+    <div class="badge__background">
+      <svg class="badge__sun" viewBox="0 0 204 300">
+        <g class="sun">
+          <circle class="outsideSun" cx="100" cy="210" r="80" />
+          <circle class="insideSun" cx="100" cy="210" r="55" />
+        </g>
+      </svg>
+    </div>
+    <div class="badge__foreground">
+
+      <!-- replace this SVG with one from the imgs folder -->
+      <!-- <svg id="field" viewBox="0 0 204 300">
+        <rect class="ground" width="204" height="175" y="185" />
+        <line x1="0" y1="185" x2="204" y2="185" stroke="white" stroke-width="5" />
+      </svg> -->
+      <svg class="mountains" viewBox="0 0 204 300">
+        <g class="mountain">
+          <polygon class="mountain__fill"
+            points="0 237.957 92.347 106.499 108.96 126.914 147.935 72.739 222.841 183.276 222.841 237.957 0 237.957" />
+          <polygon class="mountain__border"
+            points="222.841 171.616 148.017 61.881 108.796 116.398 92.159 95.953 0 226.334 0 237.957 92.535 107.044 109.124 127.43 147.853 73.598 222.841 183.012 222.841 171.616" />
+        </g>
+        <g class="mountain-bg">
+          <polygon class="mountain__fill"
+            points="0 237.957 92.347 106.499 108.96 126.914 147.935 72.739 222.841 183.276 222.841 237.957 0 237.957" />
+          <polygon class="mountain__border"
+            points="222.841 171.616 148.017 61.881 108.796 116.398 92.159 95.953 0 226.334 0 237.957 92.535 107.044 109.124 127.43 147.853 73.598 222.841 183.012 222.841 171.616" />
+        </g>
+        <rect class="ground" width="204" height="45" y="250" />
+      </svg>
+    </div>
+
+  </div>
+  <svg id="stroke-lines" viewBox="0 0 162.75 68.56">
+    <g id="stroke-line">
+      <path class="stroke-line"
+        d="M62.18,17.96C55.8,5.37,43.03,2.5,34.96,2.5S2.5,8.04,2.5,34.19c0,13.54,11.98,30.87,32.46,30.87s32.14-16.12,32.14-25.36H27.72" />
+      <circle class="stroke-line" cx="104.72" cy="42.28" r="23.28" />
+      <line class="stroke-line" x1="128" y1="17.6" x2="128" y2="67.06" />
+      <line class="stroke-line" x1="145.41" y1="17.6" x2="145.41" y2="67.06" />
+      <path class="stroke-line" d="M162.63,19.58s-14.11-.57-17.22,16.15" />
+    </g>
+  </svg>
+</body>
+
+</html>
